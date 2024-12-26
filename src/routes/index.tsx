@@ -4,8 +4,13 @@ import HomePage from "@/pages/HomePage";
 import UsersPage from "@/pages/UsersPage";
 import SettingsPage from "@/pages/SettingsPage";
 import CobaPage from "@/pages/CobaPage";
+import LoginPage from "@/pages/auth/LoginPage";
 
 const router = createBrowserRouter([
+  {
+    path: "/login",
+    element: <LoginPage />,
+  },
   {
     path: "/",
     element: <DashboardLayout />,

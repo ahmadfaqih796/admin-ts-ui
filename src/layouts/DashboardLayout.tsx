@@ -17,6 +17,9 @@ const DashboardLayout: React.FC = () => {
           <li>
             <Link to="/coba">Coba</Link>
           </li>
+          <li>
+            <Link to="/login">Login</Link>
+          </li>
         </ul>
       </nav>
       <main>

@@ -1,5 +1,11 @@
 import apiClient from "../apiClient";
 
+export interface SignInRequest {
+  username: string;
+  password: string;
+  expiresInMins: number;
+}
+
 export enum AuthApi {
   SignIn = "/auth/login",
   SignUp = "/auth/signup",
@@ -8,6 +14,7 @@ export enum AuthApi {
   User = "/user",
 }
 
-const signin = (data: any) => apiClient.post({ url: AuthApi.SignIn, data });
+const signin = (data: SignInRequest) =>
+  apiClient.post<any>({ url: AuthApi.SignIn, data });
 
 export default { signin };
