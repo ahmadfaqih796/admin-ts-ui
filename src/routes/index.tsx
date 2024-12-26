@@ -3,6 +3,7 @@ import DashboardLayout from "@/layouts/DashboardLayout";
 import HomePage from "@/pages/HomePage";
 import UsersPage from "@/pages/UsersPage";
 import SettingsPage from "@/pages/SettingsPage";
+import CobaPage from "@/pages/CobaPage";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/settings",
         element: <SettingsPage name="John Doe" value={1} />,
+      },
+      {
+        path: "/coba",
+        element: <CobaPage />,
       },
     ],
   },
