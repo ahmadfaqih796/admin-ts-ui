@@ -3,6 +3,11 @@ export type User = {
   age: number;
 };
 
+export interface AccessToken {
+  accessToken: string;
+  refreshToken: string;
+}
+
 export type UserMap<T> = {
   [key: string]: T;
 };

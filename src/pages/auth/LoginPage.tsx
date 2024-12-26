@@ -1,5 +1,20 @@
-import authService, { SignInRequest } from "@/api/services/authService";
+import authService, {
+  SignInRequest,
+  SignInResponse,
+} from "@/api/services/authService";
 import React from "react";
+
+function isSignInResponse(response: any): response is SignInResponse {
+  return (
+    typeof response.id === "number" &&
+    typeof response.username === "string" &&
+    typeof response.email === "string" &&
+    typeof response.firstName === "string" &&
+    typeof response.lastName === "string" &&
+    typeof response.accessToken === "string" &&
+    typeof response.refreshToken === "string"
+  );
+}
 
 const LoginPage: React.FC<any> = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -13,7 +28,12 @@ const LoginPage: React.FC<any> = () => {
       expiresInMins: 1,
     };
     try {
-      const response = await authService.signin(payload);
+      const response: unknown = await authService.signin(payload);
+      if (isSignInResponse(response)) {
+        console.log("Valid response:", response);
+      } else {
+        console.error("Invalid response format:", response);
+      }
       console.log("response", response);
     } catch (error) {
       console.log("eeeeerrrr", error);

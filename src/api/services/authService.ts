@@ -1,3 +1,5 @@
+import { User } from "#/entity.type";
+import { AccessToken } from "#/user.type";
 import apiClient from "../apiClient";
 
 export interface SignInRequest {
@@ -5,6 +7,8 @@ export interface SignInRequest {
   password: string;
   expiresInMins: number;
 }
+
+export type SignInResponse = User & AccessToken;
 
 export enum AuthApi {
   SignIn = "/auth/login",
@@ -15,6 +19,6 @@ export enum AuthApi {
 }
 
 const signin = (data: SignInRequest) =>
-  apiClient.post<any>({ url: AuthApi.SignIn, data });
+  apiClient.post<SignInResponse>({ url: AuthApi.SignIn, data });
 
 export default { signin };

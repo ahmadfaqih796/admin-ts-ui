@@ -38,9 +38,10 @@ class APIClient {
   request<T = any>(config: AxiosRequestConfig): Promise<T> {
     return new Promise((resolve, reject) => {
       axiosInstance
-        .request<any, AxiosResponse<Result>>(config)
+        .request<any, AxiosResponse<Result<T>>>(config)
         .then((res: AxiosResponse<Result>) => {
-          resolve(res as unknown as Promise<T>);
+          //  resolve(res as unknown as Promise<T>);
+          resolve(res.data as T);
         })
         .catch((err: Error | AxiosError) => {
           reject(err);
