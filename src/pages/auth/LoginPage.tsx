@@ -2,6 +2,7 @@ import authService, {
   SignInRequest,
   SignInResponse,
 } from "@/api/services/authService";
+import "@/styles/login.style.css";
 import React from "react";
 
 function isSignInResponse(response: any): response is SignInResponse {
@@ -39,6 +40,7 @@ const LoginPage: React.FC<any> = () => {
       console.log("eeeeerrrr", error);
     }
   };
+
   return (
     <div>
       <form onSubmit={handleSubmit}>

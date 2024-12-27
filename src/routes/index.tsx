@@ -5,11 +5,12 @@ import UsersPage from "@/pages/UsersPage";
 import SettingsPage from "@/pages/SettingsPage";
 import CobaPage from "@/pages/CobaPage";
 import LoginPage from "@/pages/auth/LoginPage";
+import LoginForm from "@/pages/auth/LoginForm";
 
 const router = createBrowserRouter([
   {
     path: "/login",
-    element: <LoginPage />,
+    element: <LoginForm />,
   },
   {
     path: "/",
