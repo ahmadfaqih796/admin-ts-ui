@@ -209,3 +209,20 @@ body {
 .container.active .toggle-right {
   transform: translateX(200%);
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 300px;
+
+    min-height: 480px;
+  }
+  .toggle-container {
+    display: none;
+  }
+  .container.active .sign-in {
+    transform: translateX(0);
+  }
+  .container.active .sign-up {
+    transform: translateX(0);
+  }
+}
