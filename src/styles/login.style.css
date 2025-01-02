@@ -116,7 +116,7 @@ body {
   z-index: 5;
 }
 
-@keyframes move {
+/* @keyframes move {
   0%,
   49.99% {
     opacity: 0;
@@ -127,7 +127,7 @@ body {
     opacity: 1;
     z-index: 5;
   }
-}
+} */
 
 .social-icons {
   margin: 20px 0;
@@ -243,17 +243,15 @@ body {
     display: none;
   }
   .toggle-container button {
+    margin: 0;
     border: none;
   }
 
-  /* .container.active .sign-in {
-    transform: translateX(100%);
-    width: 0;
-  } */
-
   .container.active .sign-in {
-    transform: translateX(0);
+    transform: translateY(100%);
+    opacity: 0;
   }
+
   .container.active .sign-up {
     transform: translateX(0);
   }
