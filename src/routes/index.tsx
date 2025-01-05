@@ -1,11 +1,10 @@
-import { createBrowserRouter } from "react-router-dom";
 import DashboardLayout from "@/layouts/DashboardLayout";
-import HomePage from "@/pages/HomePage";
-import UsersPage from "@/pages/UsersPage";
-import SettingsPage from "@/pages/SettingsPage";
 import CobaPage from "@/pages/CobaPage";
-import LoginPage from "@/pages/auth/LoginPage";
+import HomePage from "@/pages/HomePage";
+import SettingsPage from "@/pages/SettingsPage";
+import UsersPage from "@/pages/UsersPage";
 import LoginForm from "@/pages/auth/LoginForm";
+import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
