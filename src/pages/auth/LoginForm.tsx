@@ -11,7 +11,7 @@ const LoginForm: React.FC<any> = () => {
       {/* Sign Up */}
       <div className="form-container sign-up">
         <form action="">
-          <h1>Sign Up</h1>
+          <h1>Register</h1>
           <div className="social-icons">
             <a href="#" className="icon">
               <i className="fa-brands fa-google-plus-g"></i>
